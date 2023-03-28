@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import {Injectable} from "@angular/core";
 
-@Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class HeaderComponent {
+
+export class ExportService {
   export() {
     let data = JSON.stringify({ weather: { is_sunny: true, temp: '+25' } });
     let dataUri =
