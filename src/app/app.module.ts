@@ -19,9 +19,7 @@ import { WidgetComponent } from './widget/widget.component';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
