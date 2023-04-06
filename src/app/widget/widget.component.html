@@ -1,16 +1,12 @@
 <main class="content">
   <div class="widget">
     <div class="header">
-      <h1>Weather</h1>
+      <h1>Widgets</h1>
       <button mat-stroked-button (click)="export()">
         Export as JSON
       </button>
     </div>
     <mat-divider></mat-divider>
-    <h5>Currently</h5>
-    <section class="weather-widget">
-      <mat-icon class="widget-icon">wb_sunny</mat-icon>
-      <div class="value">+25</div>
-    </section>
+    <ng-content></ng-content>
   </div>
 </main>
