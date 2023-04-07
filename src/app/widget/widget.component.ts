@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {ExportService} from "../services/export-service";
 
 @Component({
@@ -7,6 +7,8 @@ import {ExportService} from "../services/export-service";
   styleUrls: ['./widget.component.scss'],
 })
 export class WidgetComponent {
+  @Input() title?:string;
+
   constructor(private exportService: ExportService) {}
 
   export() {

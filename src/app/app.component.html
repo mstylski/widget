@@ -2,10 +2,10 @@
   <span>My App</span>
 </mat-toolbar>
 <div class="widget-content">
-  <app-widget>
+  <app-widget [title]="'Weather'">
     <app-weather-content></app-weather-content>
   </app-widget>
-  <app-widget>
+  <app-widget [title]="'Sprint'">
     <app-sprint-content></app-sprint-content>
   </app-widget>
 </div>

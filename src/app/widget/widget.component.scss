@@ -1,3 +1,10 @@
+:host {
+  display: block;
+  text-align: center;
+  position: relative;
+  min-width: 190px;
+}
+
 .header {
   display: flex;
   align-items: center;
