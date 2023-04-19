@@ -1,0 +1,22 @@
+<form class="input-wrapper" [formGroup]="searchForm">
+  <h2 class="title">Car searching</h2>
+  <label for="search">
+    <input type="text" id="search" formControlName="searchText"
+           autocomplete="off" class="input" placeholder={{placeholder}}
+           [(ngModel)]="searchModel.searchText" required>
+    <div *ngIf="searchText?.invalid &&  searchText?.touched"
+         class="alert alert-danger">
+      <div *ngIf="searchText?.errors?.['minlength']" class="invalid-feedback">
+        Model must be at least 1 characters long.
+      </div>
+    </div>
+  </label>
+  <div class="buttons-wrapper">
+    <button (click)="search()" class="button" [disabled]="searchText?.errors">search</button>
+    <button (click)="searchModel.searchText=''" class="button">clear</button>
+  </div>
+  <ul *ngIf="carListResult" class="search-items-wrapper">
+    <li *ngFor="let car of carListResult;"> {{ car.model }}</li>
+  </ul>
+</form>
+
