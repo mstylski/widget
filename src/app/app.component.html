@@ -1,12 +1,9 @@
 <mat-toolbar color="primary">
-  <span>My App</span>
+  <span style="margin-right: 20px">My App</span>
+  <nav>
+    <a routerLink="widget" style="color: #FFFFFF">Widget</a>
+    <br/>
+    <a routerLink="car-search" style="color: #FFFFFF">Car-search</a>
+  </nav>
 </mat-toolbar>
-<div class="widget-content">
-  <app-widget [title]="'Weather'">
-    <app-weather-content></app-weather-content>
-  </app-widget>
-  <app-widget [title]="'Sprint'">
-    <app-sprint-content></app-sprint-content>
-  </app-widget>
-</div>
-<app-car-search [placeholder]="'Search your car...'" ></app-car-search>
+<router-outlet></router-outlet>

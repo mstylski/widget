@@ -1,12 +1,15 @@
 <main class="content">
   <div class="widget">
     <div class="header">
-      <h1>{{title}}</h1>
+      <h1>Widgets</h1>
       <button mat-stroked-button (click)="export()">
         Export as JSON
       </button>
     </div>
     <mat-divider></mat-divider>
-    <ng-content></ng-content>
+    <div class="widget-content">
+        <app-weather-content></app-weather-content>
+        <app-sprint-content></app-sprint-content>
+    </div>
   </div>
 </main>

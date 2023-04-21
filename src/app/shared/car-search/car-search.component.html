@@ -1,0 +1,16 @@
+<div class="input-wrapper">
+  <h2 class="title">Car searching</h2>
+  <label for="search">
+    <input [formControl]="searchText" type="text" id="search"
+           autocomplete="off" class="input" placeholder="Search your car...">
+    <p *ngIf="searchText.invalid" [ngClass] = "'invalid-feedback'">text is invalid</p>
+  </label>
+  <div class="buttons-wrapper">
+    <button (click)="getFilteredCars()" class="button" [disabled]="searchText.invalid">search</button>
+    <button (click)="setResetSearchText()" class="button">clear</button>
+  </div>
+  <ul *ngIf="cars$" class="search-items-wrapper">
+    <li *ngFor="let car of cars$|async;trackBy: trackByIndex"> {{ car.model }}</li>
+  </ul>
+</div>
+

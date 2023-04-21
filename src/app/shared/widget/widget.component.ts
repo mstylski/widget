@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {ExportService} from "../services/export-service";
+import {ExportService} from "../../services/export-service";
 
 @Component({
   selector: 'app-widget',
