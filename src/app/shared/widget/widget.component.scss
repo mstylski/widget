@@ -5,6 +5,12 @@
   min-width: 190px;
 }
 
+.widget-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -24,7 +30,6 @@
 .content {
   background-color: #fff;
   padding: 2rem;
-  height: calc(100vh - 64px);
   display: flex;
   box-sizing: border-box;
   justify-content: center;
