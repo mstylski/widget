@@ -3,10 +3,10 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "./shared/shared.module";
-import {MatToolbarModule} from "@angular/material/toolbar";
 import {AppRoutingModule} from "./app-routing.module";
+import {WidgetModule} from "./shared/widget/widget.module";
+import {CarSearchModule} from "./shared/car-search/car-search.module";
 
 @NgModule({
   declarations: [
@@ -16,10 +16,9 @@ import {AppRoutingModule} from "./app-routing.module";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
     SharedModule,
-    ReactiveFormsModule,
-    MatToolbarModule
+    WidgetModule,
+    CarSearchModule
   ],
   bootstrap: [AppComponent]
 })

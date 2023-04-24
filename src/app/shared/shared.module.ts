@@ -1,10 +1,5 @@
 import {NgModule} from "@angular/core";
-import {CarSearchComponent} from "./car-search/car-search.component";
-import {ReactiveFormsModule} from "@angular/forms";
-import {AsyncPipe, NgClass, NgForOf, NgIf} from "@angular/common";
-import {WidgetComponent} from "./widget/widget.component";
-import {WeatherWidgetContentComponent} from "./widget/weather-widget/weather-widget.component";
-import {SprintWidgetContentComponent} from "./widget/sprint-widget/sprint-widget.component";
+import {CommonModule} from "@angular/common";
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -12,27 +7,19 @@ import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   imports: [
-    ReactiveFormsModule,
-    NgIf,
     MatToolbarModule,
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    NgForOf,
-    AsyncPipe,
-    NgClass
+    CommonModule
   ],
-  declarations: [
-    CarSearchComponent,
-    WidgetComponent,
-    WeatherWidgetContentComponent,
-    SprintWidgetContentComponent
-  ],
+  declarations: [],
   exports: [
-    CarSearchComponent,
-    WidgetComponent,
-    WeatherWidgetContentComponent,
-    SprintWidgetContentComponent
+    MatToolbarModule,
+    CommonModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
   ],
 })
 export class SharedModule { }

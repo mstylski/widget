@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {CarsService} from "../../services/cars-service";
-import {ICar} from "./car-model"
+import {Car} from "./car-model"
 import {FormControl, Validators} from "@angular/forms";
 import {Observable} from "rxjs";
 
@@ -12,10 +12,10 @@ import {Observable} from "rxjs";
 export class CarSearchComponent {
   @Input () placeholder: string = '';
 
-  cars$:Observable<ICar[]> = new Observable<ICar[]>();
+  cars$:Observable<Car[]> = new Observable<Car[]>();
 
   searchText: FormControl = new FormControl('',
-    [Validators.pattern('^[a-zA-Z0-9]+$')]
+    [Validators.required]
   )
 
   constructor(private carsService: CarsService) {
@@ -29,7 +29,7 @@ export class CarSearchComponent {
     this.searchText.reset();
   }
 
-  trackByIndex(index: number, car: ICar) {
+  trackByIndex(index: number, car: Car) {
     return index
   }
 }

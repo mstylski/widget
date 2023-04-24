@@ -27,11 +27,13 @@
   background: #FFFFFF;
   font-size: 20px;
   font-family: "Source Code Pro", sans-serif;
+  cursor: pointer;
 }
 
 .button:disabled {
   color: #b4b2b2;
   border: 1px solid #b4b2b2;
+  cursor: unset;
 }
 
 .search-items-wrapper {
