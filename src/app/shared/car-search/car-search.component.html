@@ -3,7 +3,7 @@
   <label for="search">
     <input [formControl]="searchText" type="text" id="search"
            autocomplete="off" class="input" placeholder="Search your car...">
-    <p *ngIf="searchText.invalid" [ngClass] = "'invalid-feedback'">text is invalid</p>
+    <p *ngIf="searchText.invalid && searchText.touched" [ngClass] = "'invalid-feedback'">text is invalid</p>
   </label>
   <div class="buttons-wrapper">
     <button (click)="getFilteredCars()" class="button" [disabled]="searchText.invalid">search</button>
